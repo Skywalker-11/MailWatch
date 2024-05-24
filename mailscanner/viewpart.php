@@ -139,7 +139,7 @@ function decode_structure($structure)
                 if ('windows-1255' == strtolower($structure->ctype_parameters['charset'])) {
                     $structure->body = iconv('ISO-8859-8', 'UTF-8', $structure->body);
                 } elseif ('utf-8' !== strtolower($structure->ctype_parameters['charset'])) {
-                    $structure->body = utf8_encode($structure->body);
+                    $structure->body = getUTF8String($structure->body);
                 }
             }
             echo '<!DOCTYPE html>
@@ -159,7 +159,7 @@ function decode_structure($structure)
                 if ('windows-1255' == strtolower($structure->ctype_parameters['charset'])) {
                     $structure->body = iconv('ISO-8859-8', 'UTF-8', $structure->body);
                 } elseif ('utf-8' !== strtolower($structure->ctype_parameters['charset'])) {
-                    $structure->body = utf8_encode($structure->body);
+                    $structure->body = getUTF8String($structure->body);
                 }
             }
             if (STRIP_HTML) {
