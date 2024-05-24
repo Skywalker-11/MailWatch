@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+### Changed
+- Update htmlpurifier library to 4.17.0
 
 ## 1.2.23
 ### Added
